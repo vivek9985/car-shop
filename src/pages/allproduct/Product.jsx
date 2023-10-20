@@ -20,7 +20,6 @@ const Product = ({ car }) => {
   };
 
   return (
-    <div>
       <div className="bg-teal-700 overflow-hidden">
         <div>
           <img src={image} alt="image" className="w-full h-[300px]" />
@@ -44,7 +43,6 @@ const Product = ({ car }) => {
         </div>
         <Toaster></Toaster>
       </div>
-    </div>
   );
 };
 

@@ -7,7 +7,7 @@ const Allproduct = () => {
 
   return (
     <div className="w-10/12 mx-auto mt-10 mb-28">
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid  grid-cols-1 md:grid-cols-2 gap-5">
         {cars?.map((car) => (
           <Product key={car?._id} car={car}></Product>
         ))}
