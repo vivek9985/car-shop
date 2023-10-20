@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Brand = ({ category }) => {
-  const { id, brand, img } = category || {};
+  const { brand, img } = category || {};
 
   const brandHandler = () =>{
     console.log("clicked")

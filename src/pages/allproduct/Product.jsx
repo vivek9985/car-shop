@@ -28,14 +28,14 @@ const Product = ({ car }) => {
           <div className="p-4">
             <h2>Name : {name}</h2>
             <h2>
-              Brand : <span className="">{brand}</span>
+              Brand : <span className="uppercase">{brand}</span>
             </h2>
             <h3>Price : {price}$</h3>
-            <p>Short description : {description}</p>
             <p>Type : {type}</p>
             <h2>Rating : {rating}</h2>
           </div>
-          <div className="space-x-4 p-4 pt-0">
+          <p>Short description : {description}</p>
+          <div className="p-4 pt-0">
             <button onClick={() => deletHandler(_id)} className="btn btn-error">
               Delete
             </button>
