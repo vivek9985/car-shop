@@ -22,13 +22,13 @@ const router = createBrowserRouter([
         loader: () => fetch("/category.json"),
       },
       {
-        path: "/brand/:id",
+        path: "/brand/:brand",
         element: (
           <Privateroute>
             <Brandedproduct></Brandedproduct>
           </Privateroute>
         ),
-        loader: () => fetch("http://localhost:4000/product"),
+        loader: ({params}) => fetch(`http://localhost:4000/brand/${params.brand}`),
       },
       {
         path: "/addproduct",

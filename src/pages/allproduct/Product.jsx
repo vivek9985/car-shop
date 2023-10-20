@@ -28,7 +28,7 @@ const Product = ({ car }) => {
           <div className="p-4">
             <h2>Name : {name}</h2>
             <h2>
-              Brand : <span className="uppercase">{brand}</span>
+              Brand : <span className="">{brand}</span>
             </h2>
             <h3>Price : {price}$</h3>
             <p>Short description : {description}</p>

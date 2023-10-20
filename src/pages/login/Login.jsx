@@ -22,7 +22,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
-        toast.error("Password dosn't match");
+        toast.error(error.message);
       });
   };
   return (

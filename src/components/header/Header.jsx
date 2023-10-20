@@ -122,7 +122,7 @@ const Header = () => {
                 <div className="ml-3 mb-2 flex items-center">
                   {user?.photoURL ? (
                     <div className="flex items-center gap-2 bg-gray-900 rounded-full py-1 pl-3 pr-1">
-                      <h2 className="font-bold nav-gradient overflow-hidden">
+                      <h2 className="text-red-300 font-semibold overflow-hidden">
                         {user?.displayName}
                       </h2>
                       <img
@@ -173,7 +173,7 @@ const Header = () => {
             <div>
               {user?.photoURL ? (
                 <div className="flex items-center gap-2 bg-gray-600 rounded-full py-1 pl-3 pr-1">
-                  <h2 className="font-bold nav-gradient overflow-hidden">
+                  <h2 className="text-red-300 font-semibold overflow-hidden">
                     {user?.displayName}
                   </h2>
                   <img
