@@ -1,38 +1,11 @@
-import toast, { Toaster } from "react-hot-toast";
-
-const Addproduct = () => {
-  const addProductHandler = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const brand = form.brand.value;
-    const price = form.price.value;
-    const rating = form.rating.value;
-    const image = form.image.value;
-    const description = form.description.value;
-    const type = form.cars.value;
-    const car = { name, brand, price, rating, image, description, type };
-    console.log(car);
-
-    fetch("http://localhost:4000/product", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(car),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        toast.success("Product added!");
-        form.reset();
-      });
-  };
+const Updateproduct = () => {
   return (
     <div>
-      <h2 className="text-4xl font-semibold text-gray-500 text-center my-10">Add Product</h2>
       <div className="w-8/12 mx-auto mb-20">
-        <form onSubmit={addProductHandler} className="space-y-4 md:space-y-6">
+        <h2 className="text-4xl font-semibold text-gray-500 text-center my-10">
+          Update product
+        </h2>
+        <form className="space-y-4 md:space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
               <div>
@@ -126,7 +99,9 @@ const Addproduct = () => {
                   id="cars"
                   className="text-gray-800 px-3 py-2.5 rounded-lg w-1/2"
                 >
-                  <option value="car" className="rounded-lg">Car</option>
+                  <option value="car" className="rounded-lg">
+                    Car
+                  </option>
                   <option value="Bike">Bike</option>
                   <option value="null">null</option>
                 </select>
@@ -137,13 +112,12 @@ const Addproduct = () => {
             type="submit"
             className="w-full text-white bg-red-600 uppercase hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-lg text-sm px-5 py-3.5 text-center"
           >
-            Add product
+            Submit
           </button>
         </form>
       </div>
-      <Toaster />
     </div>
   );
 };
 
-export default Addproduct;
+export default Updateproduct;

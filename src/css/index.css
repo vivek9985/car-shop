@@ -20,7 +20,6 @@
 body {
   background: #151515;
   color: #fff;
-  /* font-family:'Trebuchet MS', sans-serif; */
 }
 
 
@@ -97,4 +96,8 @@ body {
   font-weight: 500;
   height: 300px;
   max-height: 100vh;
+}
+
+.car {
+  background-image: url(/src/assets/car-bg.jpg);
 }

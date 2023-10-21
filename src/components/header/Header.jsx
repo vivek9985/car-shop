@@ -137,16 +137,16 @@ const Header = () => {
                     </div>
                   )}
                 </div>
-                <div className="ml-3 pb-2 flex items-center">
+                <div className="ml-3 pb-2 flex items-center font-medium text-gray-900">
                   {user ? (
                     <button
                       onClick={logoutHandle}
-                      className="text-lg font-medium py-1.5 px-4 bg-red-400 rounded-full"
+                      className="pt-1.5 pb-2 py-1.5 px-4 bg-red-400 rounded-full"
                     >
                       <Link to="/">Logout</Link>
                     </button>
                   ) : (
-                    <button className="text-lg font-medium py-1.5 px-4 bg-red-400 rounded-full">
+                    <button className="pt-1.5 pb-2 py-1.5 px-4 bg-red-400 rounded-full">
                       <Link to="/login">Login</Link>
                     </button>
                   )}
@@ -155,16 +155,16 @@ const Header = () => {
             </div>
           </div>
           <div className="navbar-end w-4/12 hidden lg:flex pr-5 items-center">
-            <div className="flex items-center justify-between font-semibold">
+            <div className="flex items-center justify-between font-medium text-gray-900">
               {user ? (
                 <button
                   onClick={logoutHandle}
-                  className="text-lg font-medium py-1.5 px-4 bg-red-400 rounded-full"
-                >
+                  className="pt-1.5 pb-2 px-4 bg-red-400 rounded-full"
+                > 
                   <Link to="/">Logout</Link>
                 </button>
               ) : (
-                <button className="text-lg font-medium py-1.5 px-4 bg-red-400 rounded-full">
+                <button className="pt-1.5 pb-2 px-4 bg-red-400 rounded-full">
                   <Link to="/login">Login</Link>
                 </button>
               )}
