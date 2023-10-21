@@ -48,16 +48,6 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          to="/allproduct"
-          className={({ isActive }) =>
-            isActive ? "text-red-500 pb-px border-b-2 border-gray-500" : ""
-          }
-        >
-          All Product
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
           to="/mycart"
           className={({ isActive }) =>
             isActive ? "text-red-500 pb-px border-b-2 border-gray-500" : ""
@@ -160,7 +150,7 @@ const Header = () => {
                 <button
                   onClick={logoutHandle}
                   className="pt-1.5 pb-2 px-4 bg-red-400 rounded-full"
-                > 
+                >
                   <Link to="/">Logout</Link>
                 </button>
               ) : (

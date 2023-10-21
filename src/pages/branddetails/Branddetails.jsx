@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const Branddetails = () => {
@@ -6,9 +7,25 @@ const Branddetails = () => {
   const [brandDetail, setBrandDetail] = useState([]);
   const details = useLoaderData();
   useEffect(() => {
-    const findBrandDetail = details.find((detail) => detail._id == id);
+    const findBrandDetail = details.find((detail) => detail._id === id);
     setBrandDetail(findBrandDetail);
   }, []);
+  const addtoCartHandler = (brandDetail) => {
+    const { name, brand, price, type, description, rating, image } =
+      brandDetail;
+    const cart = { name, brand, price, type, description, rating, image };
+    fetch("http://localhost:4000/myCarts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(cart),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        toast.success("Added to mycart!");
+      });
+  };
   return (
     <div className="w-10/12 mx-auto">
       <h2 className="uppercase text-3xl text-center text-gray-400 mb-16 mt-10">
@@ -93,7 +110,10 @@ const Branddetails = () => {
                   <button className="bg-white w-5 h-5 outline-dashed outline-[#4a4b49] outline-[3px] rounded-full"></button>
                 </div>
                 <div className="mt-7 ml-2 mb-3 flex gap-5">
-                  <button className="btn px-5 text-base rounded-2xl border-none bg-fuchsia-400 hover:text-gray-900 capitalize">
+                  <button
+                    onClick={() => addtoCartHandler(brandDetail)}
+                    className="btn px-5 text-base rounded-2xl border-none bg-fuchsia-400 hover:text-gray-900 capitalize"
+                  >
                     Add to cart
                   </button>
                 </div>
@@ -102,6 +122,7 @@ const Branddetails = () => {
           </div>
         </div>
       </div>
+      <Toaster></Toaster>
     </div>
   );
 };

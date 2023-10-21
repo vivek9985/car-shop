@@ -13,7 +13,6 @@ const Updateproduct = () => {
     const price = form.price.value;
     const rating = form.rating.value;
     const image = form.image.value;
-    const description = form.description.value;
     const type = form.cars.value;
     const updatedProduct = {
       name,
@@ -21,7 +20,6 @@ const Updateproduct = () => {
       price,
       rating,
       image,
-      description,
       type,
     };
     fetch(`http://localhost:4000/product/${_id}`, {
@@ -118,22 +116,6 @@ const Updateproduct = () => {
                   defaultValue={image}
                   className="text-gray-800 bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   placeholder="product image url"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2 text-sm font-medium">
-                  Short description
-                </label>
-                <textarea
-                  type="text"
-                  name="description"
-                  id="description"
-                  defaultValue={description}
-                  rows="4"
-                  placeholder="short description"
-                  className="text-gray-800 bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   required
                 />
               </div>
