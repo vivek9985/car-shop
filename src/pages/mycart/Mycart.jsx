@@ -6,9 +6,12 @@ const Mycart = () => {
   const loadedMyCarts = useLoaderData();
   const [myCarts, setMyCarts] = useState(loadedMyCarts);
   const productDeleteHandler = (id) => {
-    fetch(`https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/myCarts/${id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://server-side-rbpeck66o-viveks-projects-a9c46c2d.vercel.app/myCarts/${id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {
@@ -24,7 +27,7 @@ const Mycart = () => {
       <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-gray-400 my-10">
         My added product
       </h2>
-      <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-2 mt-8 mb-28">
+      <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-2 mt-14 mb-40">
         {myCarts.map((cart) => (
           <div
             key={cart._id}

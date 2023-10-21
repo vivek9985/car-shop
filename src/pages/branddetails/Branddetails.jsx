@@ -14,7 +14,7 @@ const Branddetails = () => {
     const { name, brand, price, type, description, rating, image } =
       brandDetail;
     const cart = { name, brand, price, type, description, rating, image };
-    fetch("https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/myCarts", {
+    fetch("https://server-side-rbpeck66o-viveks-projects-a9c46c2d.vercel.app/myCarts", {
       method: "POST",
       headers: {
         "content-type": "application/json",

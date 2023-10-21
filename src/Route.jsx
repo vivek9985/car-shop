@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/brand/${params.brand}`
+            `https://server-side-rbpeck66o-viveks-projects-a9c46c2d.vercel.app/brand/${params.brand}`
           ),
       },
       {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/brand/${params.brand}`
+            `https://server-side-rbpeck66o-viveks-projects-a9c46c2d.vercel.app/brand/${params.brand}`
           ),
       },
       {
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/product/${params.id}`
+            `https://server-side-rbpeck66o-viveks-projects-a9c46c2d.vercel.app/product/${params.id}`
           ),
       },
       {
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            "https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/myCarts"
+            "https://server-side-rbpeck66o-viveks-projects-a9c46c2d.vercel.app/myCarts"
           ),
       },
 
