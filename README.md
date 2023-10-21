@@ -1,9 +1,13 @@
-## Added 3 Project features
+## About my project
 
 - All device compitable (responsive).
-- Have Login authantication with email and password and google with login.
+- Have Login authantication with email and password and  login with google (using Firebase).
+- Used React and Tailwind for forntend and Express for backend and MongoDB for database.
 - Used animation on scroll (AOS).
-- Used awsome toast sweet alert.
-- Used React and Tailwind for fornten and Firebase for backend (only for authantication).
+- Used awesome toastify as for alert.
+
 
 ## Live link : [(https://electric-pump.surge.sh/)]
+
+
+# Thank you :)
