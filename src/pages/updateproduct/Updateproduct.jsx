@@ -22,7 +22,7 @@ const Updateproduct = () => {
       image,
       type,
     };
-    fetch(`http://localhost:4000/product/${_id}`, {
+    fetch(`https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/product/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -30,7 +30,9 @@ const router = createBrowserRouter([
           </Privateroute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/brand/${params.brand}`),
+          fetch(
+            `https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/brand/${params.brand}`
+          ),
       },
       {
         path: "/brand/:brand/:id",
@@ -40,7 +42,9 @@ const router = createBrowserRouter([
           </Privateroute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/brand/${params.brand}`),
+          fetch(
+            `https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/brand/${params.brand}`
+          ),
       },
       {
         path: "/updateproduct/:id",
@@ -50,7 +54,9 @@ const router = createBrowserRouter([
           </Privateroute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/product/${params.id}`),
+          fetch(
+            `https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/product/${params.id}`
+          ),
       },
       {
         path: "/addproduct",
@@ -67,7 +73,10 @@ const router = createBrowserRouter([
             <Mycart></Mycart>
           </Privateroute>
         ),
-        loader: () => fetch("http://localhost:4000/myCarts"),
+        loader: () =>
+          fetch(
+            "https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/myCarts"
+          ),
       },
 
       {

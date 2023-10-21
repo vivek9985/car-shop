@@ -13,7 +13,7 @@ const Addproduct = () => {
     const type = form.cars.value;
     const car = { name, brand, price, rating, image, description, type };
 
-    fetch("http://localhost:4000/product", {
+    fetch("https://server-side-a8mc6gmc7-viveks-projects-a9c46c2d.vercel.app/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",

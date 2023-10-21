@@ -80,7 +80,7 @@ const Header = () => {
             </NavLink>
           </div>
           <div className="lg:ml-3 xl:ml-5 hidden lg:w-4/12 lg:flex lg:pl-5">
-            <ul className="flex lg:space-x-3 xl:space-x-4 text-gray-100 lg:font-light xl:font-semibold lg:text-xs xl:text-sm">
+            <ul className="flex lg:space-x-3 xl:space-x-4 text-gray-300 font-normal">
               {nav}
             </ul>
           </div>
@@ -105,7 +105,7 @@ const Header = () => {
               </label>
               <ul
                 tabIndex="0"
-                className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-gray-600 text-white rounded-box w-52 right-3 z-10 text-sm"
+                className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-gray-600 text-white rounded-box w-52 right-3 z-10 text-base font-medium"
               >
                 {nav}
                 <div className="w-auto h-px bg-teal-300 m-3 rounded-full"></div>
