@@ -12,7 +12,6 @@ const Addproduct = () => {
     const description = form.description.value;
     const type = form.cars.value;
     const car = { name, brand, price, rating, image, description, type };
-    console.log(car);
 
     fetch("http://localhost:4000/product", {
       method: "POST",
@@ -124,18 +123,19 @@ const Addproduct = () => {
                 <select
                   name="cars"
                   id="cars"
-                  className="text-gray-800 px-3 py-2.5 rounded-lg w-1/2"
+                  placeholder="type"
+                  className="text-gray-500 px-3 py-2.5 rounded-lg w-1/2"
                 >
+                  <option value=""></option>
                   <option value="car" className="rounded-lg">Car</option>
                   <option value="Bike">Bike</option>
-                  <option value="null">null</option>
                 </select>
               </div>
             </div>
           </div>
           <button
             type="submit"
-            className="w-full text-white bg-red-600 uppercase hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-lg text-sm px-5 py-3.5 text-center"
+            className="w-full text-white bg-red-600 uppercase hover:bg-teal-600 font-bold rounded-lg text-sm px-5 py-3.5 text-center"
           >
             Add product
           </button>

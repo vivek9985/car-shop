@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
-import Updateproduct from "./../updateproduct/Updateproduct";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const Branddetails = () => {
   const { id } = useParams();

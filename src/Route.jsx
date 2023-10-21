@@ -1,4 +1,4 @@
-import { Link, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Laytout from "./layout/Laytout";
 import Login from "./pages/login/Login";
@@ -6,7 +6,6 @@ import Signup from "./pages/signup/Signup";
 import Errorpage from "./pages/errorpage/Errorpage";
 import Addproduct from "./pages/addproduct/Addproduct";
 import Mycart from "./pages/mycart/Mycart";
-import Allproduct from "./pages/allproduct/Allproduct";
 import Brandedproduct from "./pages/brandedproduct/Brandedproduct";
 import Privateroute from "./privateroute/Privateroute";
 import Branddetails from "./pages/branddetails/Branddetails";
@@ -30,7 +29,8 @@ const router = createBrowserRouter([
             <Brandedproduct></Brandedproduct>
           </Privateroute>
         ),
-        loader: ({params}) => fetch(`http://localhost:4000/brand/${params.brand}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/brand/${params.brand}`),
       },
       {
         path: "/brand/:brand/:id",
@@ -39,15 +39,18 @@ const router = createBrowserRouter([
             <Branddetails></Branddetails>
           </Privateroute>
         ),
-        loader: ({params}) => fetch(`http://localhost:4000/brand/${params.brand}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/brand/${params.brand}`),
       },
       {
-        path: "/updateproduct",
+        path: "/updateproduct/:id",
         element: (
           <Privateroute>
             <Updateproduct></Updateproduct>
           </Privateroute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/product/${params.id}`),
       },
       {
         path: "/addproduct",
@@ -56,11 +59,6 @@ const router = createBrowserRouter([
             <Addproduct></Addproduct>
           </Privateroute>
         ),
-      },
-      {
-        path: "/allproduct",
-        element: <Allproduct></Allproduct>,
-        loader: () => fetch("http://localhost:4000/product"),
       },
       {
         path: "/mycart",

@@ -88,7 +88,7 @@ const Brandedproduct = () => {
                         Details
                       </button>
                     </Link>
-                    <Link to='/updateproduct'>
+                    <Link to={`/updateproduct/${brand._id}`}>
                       <button className="btn px-5 text-base rounded-2xl bg-cyan-300 hover:text-gray-900 capitalize border-none">
                         Update
                       </button>
