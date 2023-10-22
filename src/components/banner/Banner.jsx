@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,6 +17,9 @@ const Banner = () => {
       setLoaded(true);
     },
   });
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <section>
       <div className="navigation-wrapper">
@@ -24,12 +30,24 @@ const Banner = () => {
           <div className="keen-slider__slide number-slide1 bg-no-repeat bg-cover bg-top">
             <div className="grid grid-cols-1 md:grid-cols-2 h-full items-center">
               <div className="text-white px-12 md:pl-20">
-                <h3 className="font-medium text-sm md:text-lg text-red-600">
-                  Awsome cars
-                </h3>
-                <h2 className="font-semibold text-2xl md:text-4xl lg:text-6xl">
-                  Exlusive & Branded Car collection
-                </h2>
+                <div className="overflow-hidden">
+                  <h3
+                    className="font-medium text-sm md:text-lg text-red-600"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                  >
+                    Awsome cars
+                  </h3>
+                </div>
+                <div className="overflow-hidden">
+                  <h2
+                    className="font-semibold text-2xl md:text-4xl lg:text-6xl"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                  >
+                    Exlusive & Branded Car collection
+                  </h2>
+                </div>
               </div>
             </div>
           </div>

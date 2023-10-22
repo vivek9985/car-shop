@@ -43,9 +43,9 @@ const Signup = () => {
   };
 
   return (
-    <section className="w-full mx-auto mb-20 car bg-no-repeat bg-cover bg-left">
-      <div className="flex items-center justify-center md:h-screen lg:py-0 bg-[#000000cb]">
-        <div className="w-full bg-transparent -rotate-6 rounded-2xl shadow md:mt-0 sm:max-w-md xl:p-0 ">
+    <section className="w-11/12 mx-auto mt-4 lg:mt-14 mb-20 overflow-hidden">
+      <div className="flex items-center justify-center md:h-screen lg:py-0 mt-10">
+        <div className="w-11/12 lg:w-full bg-transparent -rotate-6 rounded-2xl shadow md:mt-0 sm:max-w-md xl:p-0 ">
           <div className="bg-[#ffffff3d] filter  rounded-2xl rotate-6">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">

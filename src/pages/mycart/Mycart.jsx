@@ -7,7 +7,7 @@ const Mycart = () => {
   const [myCarts, setMyCarts] = useState(loadedMyCarts);
   const productDeleteHandler = (id) => {
     fetch(
-      `https://server-side-rbpeck66o-viveks-projects-a9c46c2d.vercel.app/myCarts/${id}`,
+      `https://server-side-jbn7n4a1k-viveks-projects-a9c46c2d.vercel.app/myCarts/${id}`,
       {
         method: "DELETE",
       }

@@ -26,9 +26,9 @@ const Login = () => {
       });
   };
   return (
-    <section className="w-10/12 lg:w-11/12 xl:w-10/12 h-auto mx-auto mt-2 lg:mt-28 grid justify-between grid-cols-1 lg:grid-cols-2 rounded-2xl pb-20">
-      <div className="w-full flex flex-col items-center lg:items-start justify-center py-8 mx-auto lg:py-0">
-        <div className="w-full rounded-2xl shadow md:mt-0 sm:max-w-md xl:p-0">
+    <section className="w-full px-2 md:px-0 lg:w-11/12 xl:w-10/12 h-auto mx-auto mt-2 lg:mt-28 grid justify-between grid-cols-1 lg:grid-cols-2 rounded-2xl pb-32 overflow-hidden">
+      <div className="w-11/12 mx-auto flex flex-col items-center lg:items-start justify-center py-8 lg:py-0">
+        <div className="w-11/12 mx-auto rounded-2xl shadow md:mt-0 sm:max-w-md xl:p-0">
           <div className="bg-cyan-200 rotate-6 rounded-2xl">
             <div className="w-full bg-lime-50 p-5 space-y-4 md:space-y-6 sm:p-8 -rotate-6 rounded-2xl">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
@@ -103,7 +103,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden flex justify-start mt-12 lg:mt-0">
+      <div className="w-10/12 mx-auto overflow-hidden flex justify-start mt-12 lg:mt-0">
         <img src={loginimg} alt="image" className="rounded-2xl" />
       </div>
       <Toaster></Toaster>
