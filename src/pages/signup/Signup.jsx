@@ -21,7 +21,7 @@ const Signup = () => {
     } else {
       createUser(email, password)
         .then((res) => {
-          console.log(res.user);
+          console.log(res);
           toast.success("Created a new user.");
           form.reset();
         })
